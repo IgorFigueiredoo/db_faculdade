@@ -1,0 +1,316 @@
+SELECT *from tipo_logradouro;
+
+
+INSERT INTO tipo_telefone
+	(tipo_telefone)
+VALUES
+	('whatsapp'),
+    ('fixo'),
+    ('Residencial'),
+    ('celular');
+
+Select* from tipo_telefone;
+
+INSERT INTO Telefone
+	(num_telefone, fk_cod_tipo)
+VALUES
+	('61 99464-5097', '5'),
+    ('61 99214-2186', '6'),
+    ('61 99315-8276', '7'),
+    ('61 99216-8367', '8'),
+    ('61 99417-2478', '5'),
+	('61 99514-2581', '6'),
+	('61 99519-2692', '7'),
+	('61 99615-2701', '8'),
+    ('61 9753-8812', '8'),
+	('61 96701-8923', '7'),
+    ('61 99811-2184', '6'),
+    ('61 81951-5935', '5'),
+    ('61 46092-8306', '5'),
+    ('61 97631-2417', '6'),
+    ('61 90533-5528', '7'),
+    ('61 26061-4639', '8'),
+    ('61 8681-9940', '8'),
+    ('61 3974-8851', '7'),
+    ('61 3164-2562', '6');
+
+
+INSERT INTO Departamento
+	(nome_departamento)
+VALUES
+	('Portugues instru'),
+    ('Ciencias Naturais'),
+    ('Geografia'),
+    ('Física'),
+    ('Física Aplicada'),
+    ('Engenharia Software');
+
+Select* from departamento;
+
+INSERT INTO Curso
+	(nome_curso, fk_cod_departamento)
+VALUES
+	('Desenv_sistemas', '1'),
+    ('Geologia', '6'),
+    ('Engenharia eletrica', '1'),
+    ('Estudo_solos', '1'),
+    ('Física', '6'),
+    ('Desenvol_econo)', '1'),
+    ('Variação_ling', '1'),
+    ('Inglês técnico', '5'),
+    ('Redes Software', '2');
+	
+    
+INSERT INTO Turma
+	(periodo, num_alunos, dt_inicio, dt_fim, fk_cod_curso)
+VALUES
+	('Int', '45', '2022-01-09', '2022-12-28', '24'),
+    ('Vesp', '30', '2022-01-09', '2022-12-29', '25'),
+    ('Mat', '40', '2022-01-09', '2022-12-27', '25'),
+    ('Not', '30', '2022-01-09', '2022-12-30', '27'),
+    ('Vesp', '40', '2022-01-09', '2022-12-29', '24'),
+    ('Mat', '40', '2022-01-09', '2022-12-27', '26'),
+    ('Not', '40', '2022-01-09', '2022-12-30', '24'),
+    ('Int', '45', '2022-01-09', '2022-12-28', '27');
+
+Select* from endereco;
+
+
+INSERT INTO Aluno
+	(nome_aluno, sobrenome_aluno, cpf, `status`, sexo, nome_pai, nome_mae, email, fk_cod_curso, fk_cod_turma, fk_cod_endereco)
+VALUES
+	('João', 'Costa', '923672897', '1', 'M', 'Ricardo ', 'Marietta', 'JoaoC@gmail.com', '27', '17', '51'),
+    ('matheus', 'Ferreira', '934815406', '2', 'M', 'Bruno ', 'Agata', 'matheusF@yahoo.com', '24', '18', '52'),
+    ('carlos', 'Belarmino', '945816407', '1', 'M', 'Adalberto ', 'Marta', 'carlosbel@gmail.com', '25', '19', '53'),
+    ('Juliano', 'Trevisoli', '95682408', '1', 'M', 'Dionizio ', 'Joana Trevisoli', 'juliano.trevihotm.com', '26', '19', '54'),
+    ('Antonio', 'Souza', '9678213231', '2', 'M', 'Abel', 'Beatriz Souza', 'antonios12@gmail.com', '24', '20', '54'),
+    ('Pietro', 'Figueiredo', '39142132315', '1','M', 'Igor', 'Larissa', 'PietroFig@gmail.com', '25', '17', '37'),
+    ('Bruna', 'Bragança', '391420361', '1', 'F', 'Angelo', 'Isadora', 'bruna@gmail.com', '27', '22', '37'),
+    ('Gustavo', 'Prado', '9288033624', '1', 'M', 'Mario', 'Eunice', 'gustavo@yahoo.com', '26', '24', '47'),
+    ('karina', 'Dantas', '998875462', '1', 'F', 'Bernardino', 'Carla', 'kainaa@yahoo.com', '27', '23', '48'),
+    ('fabiana', 'Marques', '999846342', '1', 'F', 'Carlos', 'Luzia', 'fabiana@gmail.com', '24', '22', '49'),
+    ('Amanda', 'Tinoco', '9927689362', '1', 'F', 'Mario', 'Viviane', 'Amanda@gmail.com', '25', '21', '42'),
+	('Sara', 'Figueiredo', '992803768', '1', 'F', 'Jorge', 'Dalva', 'Saraf@yahoo.com', '24', '20', '40'),
+    ('Rosa', 'Patreze', '919763902', '1', 'M', 'Dantas', 'Julia', 'ROSaP@gmail.com', '24', '23', '52'),
+    ('Rosana', 'Alves', '992763017', '1', 'F', 'Marta', 'Sergio', 'Rosana@yahoo.com', '27', '21', '53'),
+    ('Larissa', 'Costa', '991532591', '1', 'F', 'Alberto', 'Rita', 'Larissa2c@gmail.com', '26', '18', '42'),
+    ('Amadeu', 'Oliveira','996478390', '2', 'M', 'Vitor', 'Cristina', 'amadeuOYahoo.com', '27', '17', '37'),
+    ('Hugo', 'Borge', '987465327', '1', 'M', 'João', 'Catarina', 'Hugoborge@gmail.com', '25', '19', '46'),
+	('Bruno', ' Castro', '979437654', '1', 'M', 'Breno', 'Diana', 'brunoCas@gmail.com', '25', '22', '50'),
+    ('caio', 'Souza', '912764538', '1', 'M', 'Jorge', 'Virgínia', 'CaioSgmail.com', '26', '23', '38'),
+	('Vitória', 'Santana', '927465398', '1', 'F', 'Gabriel', 'Dora', 'Vitória@yahoo.com', '27', '21', '39');
+
+Select* from telefone;
+
+INSERT INTO Telefone_aluno
+	(fk_RA, fk_cod_telefone)
+VALUES
+	('72', '41'),
+    ('73', '42'),
+    ('74', '43'),
+    ('75', '44'),
+    ('76', '45'),
+    ('77', '46'),
+    ('78', '47'),
+    ('71', '48'),
+    ('70', '49'),
+    ('61', '50'),
+    ('62', '51'),
+    ('63', '52'),
+    ('64', '53'),
+    ('65', '54'),
+    ('66', '55'),
+    ('67', '56'),
+	('68', '57'),
+    ('69', '47'),
+    ('69', '39');
+
+INSERT INTO Disciplina
+	(nome_disciplina, carga_horaria, descricao, num_alunos, fk_cod_departamento)
+VALUES
+	('Engenharia requi', '35', 'Engenharia de requisitos', '45', '6'),
+    ('Programação Soft', '45', 'Programação em Software', '40', '5'),
+    ('Logica de progra', '45', 'Logica de programação', '40', '4'),
+    ('Mecânica', '35', 'Mecânica', '30', '5'),
+    ('Engenharia Soft', '40', 'Engenharia de Software', '40', '6'),
+    ('Materias aplica', '45', 'Materiais e Aplicações', '35', '3'),
+    ('Programação PHP', '40', 'Programação PHP', '20', '4'),
+    ('Redes de Comput', '40', 'Redes de Computadores', '30', '5'),
+    ('Lógica Progra', '60', 'Lógica de Programação', '30', '5'),
+    ('Estudo dos solos', '60', 'Estudo dos solos', '30', '6'),
+    ('Estatística', '60', 'Estatística', '30', '5'),
+    ('Estatística aplic', '50', 'Estatística aplicada', '25', '6'),
+    ('probabilidade', '40', 'probabilidade', '30', '5'),
+    ('Cálculo Deriv', '40', 'Cálculo de Derivadas','25', '6'),
+    ('Cálculo Estrut', '40', 'Cálculo de Estruturas','30', '6'),
+    ('Cálculo Integral', '40','Cálculo Integral','30', '5'),
+    ('Filosofia Geografia', '30','Filosofia da geografia','30', '6'),
+    ('Cartografia', '40','Cartografia','25', '3'),
+    ('Variação Lingui', '40','Variação Linguistica','30','4'),
+    ('Química', '30','Química','30','5'),
+    ('Trans química ', '40','Transformações químicas','25','6'),
+    ('Inglês Técnico','30','Inglês Técnico','50','6'),
+    ('Design e Interação','40','Design e Interação','50','6'),
+    ('Física da mat cond','45','Física da matéria condensada','45','4'),
+    ('Coleta dados e amos','45','Coleta de dados e amostragem','35','5'),
+    ('Fund Arq Computad','45','Fund Arq Computad','35','6');
+
+Select* from curso;
+
+
+INSERT INTO Curso_disciplina
+	(fk_cod_curso, fk_cod_disciplina)
+VALUES
+	('24',	'59'),
+	('26',	'60'),
+	('24',	'61'),
+	('25',	'62'),
+	('24',	'63'),
+	('25',	'64'),
+	('26',	'65'),
+	('23',	'66'),
+	('27',	'67'),
+	('27',	'68'),
+	('26',	'69'),
+	('24',	'70'),
+	('25',	'71'),
+	('25',	'72'),
+	('24',	'73'),
+	('24',	'74'),
+	('24',	'75'),
+	('24',	'76'),
+	('24',	'77'),
+	('26',	'78');
+
+INSERT INTO Professor
+	(nome_professor, sobrenome_professor, `status`, fk_cod_departamento)
+VALUES
+	('Carina', 'Rabelo', '1', '5'),
+    ('Rogerio', 'Avila', '1', '6'),
+    ('Larissa', 'Gomes', '1', '6'),
+    ('Hugo', 'Silva', '1', '4'),
+    ('Rebeca', 'Godoi', '1', '6'),
+    ('Ivo', 'Costa', '1', '3'),
+    ('Marcio', 'Souza', '1', '6'),
+    ('Camila', 'Ribeiro', '2', '6'),
+    ('Paula', 'Matos', '2', '5'),
+    ('Luciano', 'Vieira', '2', '6');
+    
+Select* from disciplina;
+
+    
+INSERT INTO Professor_disciplina
+	(fk_cod_professor, fk_cod_disciplina)
+VALUES
+	('13','60'),
+	('12','62'),
+	('12','63'),
+	('14','64'),
+	('15','65'),
+	('16','66'),
+	('17','67'),
+	('18','59'),
+	('19','69'),
+	('13','53'),
+	('19','71'),
+	('12','72'),
+	('20','73'),
+	('14','74'),
+	('15','75'),
+	('16','76'),
+	('17','77'),
+	('11','58'),
+	('19','57'),
+	('13','61'),
+	('11','71'),
+	('18','72'),
+	('13','73'),
+	('14','54'),
+	('11','65'),
+	('14','66'),
+	('17','57'),
+	('19','58'),
+	('19','70'),
+	('11','53');
+
+Select* from aluno;
+
+INSERT INTO Aluno_Disciplina
+	(fk_ra, fk_cod_disciplina)
+VALUES
+	('61','61'),
+	('70','62'),
+	('63','63'),
+	('64','64'),
+	('69','65'),
+	('66','66'),
+	('67','67'),
+	('68','68'),
+	('79','69'),
+	('70','70'),
+	('71','71'),
+	('72','72'),
+	('73','73'),
+	('74','74'),
+	('75','75'),
+	('76','76'),
+	('77','77'),
+	('78','78'),
+	('80','53'),
+	('61','54'),
+	('62','55'),
+	('63','56'),
+	('64','57'),
+	('65','58'),
+	('66','59'),
+	('67','60'),
+	('68','65'),
+	('69','64'),
+	('70','63'),
+	('71','62');
+
+INSERT INTO Historico
+	(dt_inicio, dt_fim, fk_ra)
+VALUES
+	('2022-01-09','2022-05-26','61'),
+	('2022-01-09','2022-06-26','62'),
+	('2022-01-09','2022-06-26','63'),
+	('2022-01-09','2022-06-26','64'),
+	('2022-01-09','2022-07-27','65'),
+	('2022-01-09','2022-07-27','66'),
+	('2022-01-09','2022-07-27','67'),
+	('2022-01-09','2022-08-27','68'),
+	('2022-01-09','2022-08-28','69'),
+	('2022-01-09','2022-08-28','71'),
+	('2022-01-09','2022-08-28','72'),
+	('2022-01-09','2022-09-28','73'),
+	('2022-01-09','2022-09-29','74'),
+	('2022-01-09','2022-10-29','75'),
+	('2022-01-09','2022-10-30','76'),
+	('2022-01-09','2022-10-30','77'),
+	('2022-01-09','2022-10-30','78');
+
+Select* from historico;
+
+INSERT INTO Disciplina_historico
+	(nota, frequencia, fk_cod_historico, fk_cod_disciplina)
+    
+VALUES
+	('7.0','60','12','62'),
+	('8.5','85','13','53'),
+	('9.0','75','14','54'),
+	('8.5','60','15','55'),
+	('8.5','60','16','56'),
+	('7.0','60','17','57'),
+	('6.5','75','10','58'),
+	('9.0','80','9','59'),
+	('6.5','80','10','70'),
+	('6.0','65','11','71'),
+	('7.5','80','12','72'),
+	('9.0','95','13','73'),
+	('8.5','100','14','74'),
+	('8.5','100','15','75'),
+	('7.0','90','16','76'),
+	('5.5','70','17','77'),
+	('9.0','85','8','78');
+    
